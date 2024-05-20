@@ -28,7 +28,7 @@ const Camera = () => {
     <div className="flex flex-col sm:flex-row p-4 ">
       <div className="w-full sm:w-1/2 p-2">
         <VideoRecorder onReady={handleVideoReady} />
-        <div className="flex flex-row ml-48 -mt-8">
+        <div className="flex flex-row ml-48 mt-4">
           <CaptureButton videoRef={videoRef} onCapture={handleCaptureImage} />
           <CaptureVideoButton stream={stream} onCapture={handleCaptureVideo} />
         </div>

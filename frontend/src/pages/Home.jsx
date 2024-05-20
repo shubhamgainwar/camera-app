@@ -11,16 +11,21 @@ import Meeting from "../components/Meeting/Meeting.jsx";
 const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isAuthenticated = useSelector((state) => state.auth.status);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isRegister = useSelector((state) => state.auth.isRegister);
 
   const openCamApp = () => navigate("/cam");
   const openFitnessApp = () => navigate("/fitness");
   const openMeetApp = () => {
-    navigate("/meeting");
+    !isAuthenticated
+      ? navigate("/meeting")
+      : isRegister
+      ? navigate("/login")
+      : navigate("/register");
   };
 
   return (
-    <div className="container mx-auto  p-24  items-center justify-center ">
+    <div className="container mx-auto  p-12  items-center justify-center ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mt-2/3 mb-2/3">
         <div
           onClick={openCamApp}

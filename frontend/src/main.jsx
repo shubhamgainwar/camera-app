@@ -43,27 +43,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/meeting",
-        element: (
-          // <AuthLayout authentication={true}>
-          <Meeting />
-          // </AuthLayout>
-        ),
+        element: <Meeting />,
       },
       {
         path: "/register",
-        element: (
-          <AuthLayout authentication={false}>
-            <Register />
-          </AuthLayout>
-        ),
+        element: <Register />,
       },
       {
         path: "/login",
-        element: (
-          <AuthLayout authentication={false}>
-            <Login />
-          </AuthLayout>
-        ),
+        element: <Login />,
       },
     ],
   },

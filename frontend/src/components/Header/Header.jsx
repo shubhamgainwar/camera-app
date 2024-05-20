@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Container from "../Container.jsx";
+import { Button } from "flowbite-react";
 
 const Header = () => {
   const navigate = useNavigate();

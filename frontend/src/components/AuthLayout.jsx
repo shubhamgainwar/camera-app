@@ -16,7 +16,9 @@ const AuthLayout = ({ children, authentication = true }) => {
     setLoader(false);
   }, [isAuthenticated, navigate, authentication]);
 
-  return loader ? <h1>Loading...</h1> : <>{children}</>;
+  // loader ? <h1>Loading...</h1> : <>{children}</>
+
+  return <>{children}</>;
 };
 
 export default AuthLayout;
